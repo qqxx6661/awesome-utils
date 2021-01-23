@@ -72,13 +72,4 @@ public class IPAddressUtil {
         return (ipAddr & mask) == (cidrIpAddr & mask);
     }
 
-    public static void main(String[] args) {
-        System.out.println(isInRange("192.168.1.127", "192.168.1.64/26"));
-        System.out.println(isInRange("192.168.1.2", "192.168.0.0/23"));
-        System.out.println(isInRange("192.168.0.1", "192.168.0.0/24"));
-        System.out.println(isInRange("192.168.0.0", "192.168.0.0/32"));
-        System.out.println(isInRange("10.249.30.53", "10.249.0.0/16"));
-        System.out.println(isInRange("10.249.0.53", "10.249.0.0/24"));
-        System.out.println(isInRange("10.249.0.0", "10.249.0.0/32"));
-    }
 }
