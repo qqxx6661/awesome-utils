@@ -13,7 +13,7 @@ public class DateTimeUtil {
      * @param seconds 秒数
      * @return
      */
-    public static String formatCallDuration(Integer seconds) {
+    public static String formatDuration(Integer seconds) {
         String standardTime;
         if (seconds <= 0){
             standardTime = "00:00";

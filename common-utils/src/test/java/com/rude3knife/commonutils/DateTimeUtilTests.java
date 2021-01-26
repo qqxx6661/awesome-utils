@@ -8,11 +8,10 @@ import static org.junit.Assert.assertEquals;
 public class DateTimeUtilTests {
 
     @Test
-    public void formatCallDuration() {
-        assertEquals("00:30", DateTimeUtil.formatCallDuration(30));
-        assertEquals("02:30", DateTimeUtil.formatCallDuration(150));
-        assertEquals("01:00:50", DateTimeUtil.formatCallDuration(3650));
-
+    public void formatDuration() {
+        assertEquals("00:30", DateTimeUtil.formatDuration(30));
+        assertEquals("02:30", DateTimeUtil.formatDuration(150));
+        assertEquals("01:00:50", DateTimeUtil.formatDuration(3650));
     }
 
 }
