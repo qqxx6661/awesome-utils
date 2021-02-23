@@ -20,7 +20,7 @@ public class PageUtil {
      * @param list 分页的对象
      * @return
      */
-    public static List<Integer> getListPageContent(int page, int pageSize, List<Integer> list) {
+    public static List<?> getListPageContent(int page, int pageSize, List<?> list) {
         if (list == null || list.size() == 0) {
             throw new RuntimeException("list本身不能为空!");
         }
@@ -45,22 +45,11 @@ public class PageUtil {
      * @param list
      * @return
      */
-    public static int getListTotalPage(int pageSize, List<Integer> list) {
+    public static int getListTotalPage(int pageSize, List<?> list) {
         if (list.size() % pageSize == 0) {
             return list.size() / pageSize;
         } else {
             return list.size() / pageSize + 1;
-        }
-    }
-
-    public static void main(String[] args) {
-        int pageSize = 10;
-        List<Integer> test = new ArrayList<>();
-        for (int i = 1; i <= 100 ; i++) {
-            test.add(i);
-        }
-        for (int i = 1; i <= getListTotalPage(pageSize, test); i++) {
-            System.out.println(getListPageContent(i, pageSize, test));
         }
     }
 
