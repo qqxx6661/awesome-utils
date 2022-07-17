@@ -1,4 +1,4 @@
-package com.rude3knife.commonutils.utils;
+package cn.monitor4all.commonutils.utils;
 
 import javax.servlet.http.HttpServletRequest;
 

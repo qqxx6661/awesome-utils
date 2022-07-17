@@ -1,6 +1,6 @@
-package com.rude3knife.commonutils;
+package cn.monitor4all.commonutils;
 
-import com.rude3knife.commonutils.utils.PageUtil;
+import cn.monitor4all.commonutils.utils.PageUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package com.rude3knife.commonutils;
+package cn.monitor4all.commonutils;
 
-import com.rude3knife.commonutils.utils.IPAddressUtil;
+import cn.monitor4all.commonutils.utils.IPAddressUtil;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

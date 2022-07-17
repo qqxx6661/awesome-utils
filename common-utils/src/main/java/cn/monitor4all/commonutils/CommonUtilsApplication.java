@@ -1,4 +1,4 @@
-package com.rude3knife.commonutils;
+package cn.monitor4all.commonutils;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

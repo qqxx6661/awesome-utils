@@ -1,6 +1,6 @@
-package com.rude3knife.commonutils;
+package cn.monitor4all.commonutils;
 
-import com.rude3knife.commonutils.utils.DateTimeUtil;
+import cn.monitor4all.commonutils.utils.DateTimeUtil;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
