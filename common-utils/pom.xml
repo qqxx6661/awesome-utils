@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.alibaba.cola</groupId>
             <artifactId>cola-component-extension-starter</artifactId>
-            <version>4.1.1</version>
+            <version>4.2.1</version>
         </dependency>
 
         <dependency>
@@ -70,6 +70,18 @@
             <version>5.7.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -77,6 +89,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>cn.monitor4all.commonutils.CommonUtilsApplication</mainClass>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
