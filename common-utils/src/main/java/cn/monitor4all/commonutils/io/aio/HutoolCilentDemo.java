@@ -1,15 +1,19 @@
-package cn.monitor4all.commonutils.io.socket.TCP;
+package cn.monitor4all.commonutils.io.aio;
 
-import cn.hutool.core.lang.Console;
-import cn.hutool.core.util.StrUtil;
 import cn.hutool.socket.aio.AioClient;
 import cn.hutool.socket.aio.AioSession;
 import cn.hutool.socket.aio.SimpleIoAction;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 
+/**
+ * AIO 客户端
+ */
+@Slf4j
 public class HutoolCilentDemo {
 
     public static void main(String[] args) throws IOException {
@@ -18,15 +22,21 @@ public class HutoolCilentDemo {
 
             @Override
             public void doAction(AioSession session, ByteBuffer data) {
+                byte[] bytes = new byte[data.limit()];
+                data.get(bytes);
+                String str = new String(bytes, StandardCharsets.UTF_8);
+                log.info("服务端 [{}] ByteBuffer [{}] 发来消息 [{}]", session.getRemoteAddress(), data, str);
+
                 if(data.hasRemaining()) {
-                    Console.log(StrUtil.utf8Str(data));
                     session.read();
                 }
-                Console.log("OK");
             }
         });
 
-        client.write(ByteBuffer.wrap("Hello".getBytes()));
+
+        client.write(ByteBuffer.wrap("{\"data\":\"123\"}".getBytes()));
+
+
         client.read();
 
         client.close();
