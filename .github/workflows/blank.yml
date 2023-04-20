@@ -34,7 +34,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B test --file common-utils/pom.xml
       # 使用Github Action市场提供的Junit流程来执行单元测试，并且输出报告
-      - uses: ashley-taylor/junit-report-annotations-action@master
+      - uses: ashley-taylor/junit-report-annotations-action@v1.0
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
         if: always()
