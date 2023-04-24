@@ -38,5 +38,5 @@ jobs:
         uses: mikepenz/action-junit-report@v3
         if: success() || failure() # always run even if the previous step fails
         with:
-          ACCESS_TOKEN: ${{ secrets.actions }}
+          GITHUB_TOKEN: ${{ secrets.actions }}
           report_paths: '**/build/test-results/test/TEST-*.xml'
