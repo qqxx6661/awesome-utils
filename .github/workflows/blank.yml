@@ -1,4 +1,8 @@
 name: Junit
+permissions:
+  contents: read
+  checks: write
+  id-token: write
 
 # on用来控制何时运行这个workflow
 on:
