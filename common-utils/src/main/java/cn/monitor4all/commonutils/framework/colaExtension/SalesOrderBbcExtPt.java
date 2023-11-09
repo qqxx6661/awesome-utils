@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Extension(bizId = "SalesOrderBbc")
-public class SalesOrderBbcExtPt implements SalesOrderBizExtPt{
+public class SalesOrderBbcExtPt implements SalesOrderBizExtPt {
     @Override
     public boolean addSalesOrderBiz(String salesOrderId) {
         log.info("SalesOrderBbcExtPt addSalesOrderBiz [{}]", salesOrderId);

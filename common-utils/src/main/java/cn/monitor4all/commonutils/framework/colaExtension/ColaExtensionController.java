@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping(path = "/logrecord")
-public class TestController {
+@RequestMapping(path = "/extension")
+public class ColaExtensionController {
 
     @Resource
     private ExtensionExecutor extensionExecutor;
 
     @GetMapping("/testSuccess")
-    public String testSuccess(String bizId) throws Exception {
+    public String testSuccess(String bizId, String orderId) throws Exception {
         BizScenario bizScenario = BizScenario.valueOf(bizId);
-        boolean result = extensionExecutor.execute(SalesOrderBizExtPt.class, bizScenario, extension -> extension.addSalesOrderBiz("111"));
+        boolean result = extensionExecutor.execute(SalesOrderBizExtPt.class, bizScenario, extension -> extension.addSalesOrderBiz(orderId));
         return String.valueOf(result);
     }
 

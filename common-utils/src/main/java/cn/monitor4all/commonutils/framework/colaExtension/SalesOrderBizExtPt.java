@@ -4,5 +4,5 @@ import com.alibaba.cola.extension.ExtensionPointI;
 
 public interface SalesOrderBizExtPt extends ExtensionPointI {
 
-    public boolean addSalesOrderBiz(String salesOrderId);
+    boolean addSalesOrderBiz(String salesOrderId);
 }
