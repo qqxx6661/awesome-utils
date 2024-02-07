@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.alibaba.cola</groupId>
             <artifactId>cola-component-extension-starter</artifactId>
-            <version>4.2.1</version>
+            <version>4.3.2</version>
         </dependency>
 
         <dependency>
